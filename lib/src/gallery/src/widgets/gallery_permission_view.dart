@@ -11,17 +11,18 @@ class GalleryPermissionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.black,
       padding: const EdgeInsets.all(24.0),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           // Heading
           Text(
             'Access Your Album',
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 16.0,
+              color: Colors.white,
             ),
           ),
 
@@ -29,8 +30,11 @@ class GalleryPermissionView extends StatelessWidget {
 
           // Description
           Text(
-            'Allow Likk picker to access your album for picking media.',
+            'Allow Image picker to access your album for picking media.',
             textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
 
           SizedBox(height: 8.0),
@@ -38,7 +42,12 @@ class GalleryPermissionView extends StatelessWidget {
           // Allow access button
           TextButton(
             onPressed: PhotoManager.openSetting,
-            child: Text('Allow Access'),
+            child: Text(
+              'Allow Access',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
         ],
       ),
